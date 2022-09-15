@@ -2,7 +2,7 @@
 
 Ontologies provide the organizing principle for data in CARD and allow the power of [Extensional Mereology](https://en.wikipedia.org/wiki/Mereology) in searching of data. CARD's Controlled Vocabulary Module in an extension of the [Chado CV Module](http://gmod.org/wiki/Chado_CV_Module). Note that when curating CARD, "ontology module", "cvterm module", and "controlled vocabulary module" are all synonymous terms. This page describes the Broad Street version of the Chado ontology SQL schema, not the ontologies themselves. To review CARD's ontologies, see [Ontologies](/ontologies/).
 
-A variety of metadata are associated with ontology terms in CARD, via the *cvtermprop*, *cvtermsynonym*, and *cvterm_dbxref* tables. To support association of publications with ontology terms, we added the custom *cvterm_pub* table and similarly we added the *cvterm_models* table to link ontology terms to the [Model Module](/database_modules/model_module.md).
+A variety of metadata are associated with ontology terms in CARD, via the *cvtermprop*, *cvtermsynonym*, and *cvterm_dbxref* tables. To support association of publications with ontology terms, we added the custom *cvterm_pub* table and similarly we added the *cvterm_models* table to link ontology terms to the [Model Module](model_module.md).
 
 The [External Reference Module](dbxref_module.md) has a good explanation of how [Orthogonality](/ontologies/orthogonality.md) can be supported in Broad Street, e.g. placement of a Gene Ontology term/accession within the Antibiotic Resistance Ontology.
 

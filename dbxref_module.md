@@ -4,7 +4,7 @@ Broad Street's External Reference Module was adapted from [Chado](http://gmod.or
 
 ## Example
 
-In the [Controlled Vocabulary Module](/database_modules/controlled_vocabulary_module.md), the *cvterm* table has the term for the [OSA-371](https://dune.mcmaster.ca/ontology/37957) gene with *cvterm.cvterm_id* 37957 and with *cvterm.dbxref_id* 331009. In the *dbxref* table, this *dbxref_id* has *dbxref.accession* 3001557 and *dbxref.db_id* 173. In the *db* table, this *db_id* is the ARO. Tracing the connections, within the Antibiotic Resistance Ontology OXA-371 is ARO:3001557.
+In the [Controlled Vocabulary Module](controlled_vocabulary_module.md), the *cvterm* table has the term for the [OSA-371](https://dune.mcmaster.ca/ontology/37957) gene with *cvterm.cvterm_id* 37957 and with *cvterm.dbxref_id* 331009. In the *dbxref* table, this *dbxref_id* has *dbxref.accession* 3001557 and *dbxref.db_id* 173. In the *db* table, this *db_id* is the ARO. Tracing the connections, within the Antibiotic Resistance Ontology OXA-371 is ARO:3001557.
 
 ![DBXREF](/img/cv_db.jpg)
 

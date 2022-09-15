@@ -48,7 +48,7 @@ This table documents the publications describing the individual model parameters
 | Field | Description |
 |-------|-------------|
 | model_parameters_pub_id | unique identifier for each model parameter publication join |
-| pub_id | publication identifier found in the [Publication Module](/database_modules/publication_module.md) |
+| pub_id | publication identifier found in the [Publication Module](publication_module.md) |
 | model_parameters_id | parameter identifier found in the *model_parameters* table |
 | model_id | associated model identifier found in the *models* table |
 

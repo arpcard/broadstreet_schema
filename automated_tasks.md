@@ -8,15 +8,15 @@ This crontab job is used to genearate the *search.json* file which is used to po
 
 ## Calculate *cvtermpath* table
 
-This crontab job is used to create all the directed graph paths between ontology terms, runs once each day, and the underlying script is [calculatecvtermpath.pl](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/calculate_cvtermpath/calculatecvtermpath.pl). A number of functions on the CARD website depend on cvtermpath, so ontological changes will not take effect until ~6 am each day (cron job starts at 2 am). For details see the [*cvtermpath* table documentation](/database_modules/controlled_vocabulary_module.md). This script is accompanied by second script that outputs errors or warnings to SLACK at 7 am, [check_cvtermpath_calculations.sh](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/calculate_cvtermpath/check_cvtermpath_calculations.sh).
+This crontab job is used to create all the directed graph paths between ontology terms, runs once each day, and the underlying script is [calculatecvtermpath.pl](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/calculate_cvtermpath/calculatecvtermpath.pl). A number of functions on the CARD website depend on cvtermpath, so ontological changes will not take effect until ~6 am each day (cron job starts at 2 am). For details see the [*cvtermpath* table documentation](controlled_vocabulary_module.md). This script is accompanied by second script that outputs errors or warnings to SLACK at 7 am, [check_cvtermpath_calculations.sh](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/calculate_cvtermpath/check_cvtermpath_calculations.sh).
 
 ## Broadstreet QC - ARO, cvterms
 
-This crontab job checks for errors in the [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md) and [Controlled Vocabulary Module](/database_modules/controlled_vocabulary_module.md), runs at 2 am every day, and the underlying script is [broadstreet_qc.pl](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/quality_control/broadstreet_qc.pl).
+This crontab job checks for errors in the [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md) and [Controlled Vocabulary Module](controlled_vocabulary_module.md), runs at 2 am every day, and the underlying script is [broadstreet_qc.pl](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/quality_control/broadstreet_qc.pl).
 
 ## Broadstreet QC - Models
 
-This crontab job checks for errors in the [Model Module](/database_modules/model_module.md), runs at 2 am every day, and the underlying script is [models_qc.php](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/quality_control/models_qc.php).
+This crontab job checks for errors in the [Model Module](model_module.md), runs at 2 am every day, and the underlying script is [models_qc.php](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/quality_control/models_qc.php).
 
 ## Generate *card.json* and BLAST databases
 

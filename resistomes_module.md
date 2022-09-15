@@ -9,11 +9,11 @@ A table containing all individual RGI predictions (excluding "Loose") for genome
 | Field | Description |
 |-------|-------------|
 | prevalence_id | unique identifier for each RGI prediction |
-| model_id | CARD detection model from the [Model Module](/database_modules/model_module.md), eg. model_id=783 for the *NDM-1* gene |
+| model_id | CARD detection model from the [Model Module](model_module.md), eg. model_id=783 for the *NDM-1* gene |
 | source_species | the taxonomic source of the annotated sequence from the [NCBI Taxonomy Ontology](ncbi_taxonomy_ontology.md) |
 | dna_accession | the annotated sequence accession, e.g. NZ_CP084031.1 |
-| fmin | the start nucleotide position of the RGI prediction in the annotated sequence in [Interbase Co-Ordinates](/database_modules/model_module.md#interbase-co-ordinates) |
-| fmax | the stop nucleotide position of the RGI prediction in the annotated sequence in [Interbase Co-Ordinates](/database_modules/model_module.md#interbase-co-ordinates) |
+| fmin | the start nucleotide position of the RGI prediction in the annotated sequence in [Interbase Co-Ordinates](model_module.md#interbase-co-ordinates) |
+| fmax | the stop nucleotide position of the RGI prediction in the annotated sequence in [Interbase Co-Ordinates](model_module.md#interbase-co-ordinates) |
 | strand | forward (1) or reverse (-1) strand of RGI prediction |
 | evalue | [expectation value](https://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html) of the RGI prediction (depreciated) |
 | snps | observed AMR SNPs (depreciated) |
@@ -61,12 +61,12 @@ The *prevalence_prevalence_sequence* table connects the individual RGI predictio
 
 ## *prevalence_models_stats* table (a [materialization](https://en.wikipedia.org/wiki/Materialized_view))
 
-A table containing all prevalence statistics for individual CARD detection model from the [Model Module](/database_modules/model_module.md).
+A table containing all prevalence statistics for individual CARD detection model from the [Model Module](model_module.md).
 
 | Field | Description |
 |-------|-------------|
 | prevalence_models_stats_id | unique identifier for each statistic |
-| model_id | CARD detection model from the [Model Module](/database_modules/model_module.md) |
+| model_id | CARD detection model from the [Model Module](model_module.md) |
 | source_species | the taxonomic source of the annotated sequence from the [NCBI Taxonomy Ontology](ncbi_taxonomy_ontology.md) |
 | ncbi_plasmid | prevalence in NCBI complete plasmid sequences |
 | ncbi_contig | prevalence in NCBI whole-genome assembly contigs |
