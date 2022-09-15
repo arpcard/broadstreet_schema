@@ -52,5 +52,5 @@ This crontab job creates the *genomes.json* file that enable the Resistomes, Var
 
 ## Create Violin Plots
 
-This crontab job creates the Resistomes & Variants violin plots, e.g. see [TEM-1's violin plots](https://devcard.mcmaster.ca/prevalence/355), at 2 am each day and the underlying script is [create_models_violins.php](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/generate_prevalence_data/create_models_violins.php). 
+This crontab job creates the Resistomes & Variants violin plots, e.g. see [TEM-1's violin plots](https://card.mcmaster.ca/prevalence/355), at 2 am each day and the underlying script is [create_models_violins.php](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/generate_prevalence_data/create_models_violins.php). 
 
