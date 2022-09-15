@@ -2,8 +2,6 @@
 
 Broad Street's External Reference Module was adapted from [Chado](http://gmod.org/wiki/Introduction_to_Chado) for storing external references such as PMID, PDB accessions, GI numbers, etc. A number of other modules cross-reference to the *dbxref* table. Thus, when a part of Broad Street wishes to refer to an external accession, it references a *dbxref_id*. Using a centralized module for external references avoids duplicate information among modules and means a single correction immediately applies to all modules.
 
-[[_TOC_]]
-
 ## Example
 
 In the [Controlled Vocabulary Module](/database_modules/controlled_vocabulary_module.md), the *cvterm* table has the term for the [OSA-371](https://dune.mcmaster.ca/ontology/37957) gene with *cvterm.cvterm_id* 37957 and with *cvterm.dbxref_id* 331009. In the *dbxref* table, this *dbxref_id* has *dbxref.accession* 3001557 and *dbxref.db_id* 173. In the *db* table, this *db_id* is the ARO. Tracing the connections, within the Antibiotic Resistance Ontology OXA-371 is ARO:3001557.

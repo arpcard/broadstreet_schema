@@ -2,8 +2,6 @@
 
 Automated tasks are run using the CARD Website [crontab](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_crons/crontab).
 
-[[_TOC_]]
-
 ## Update Website Search Box
 
 This crontab job is used to genearate the *search.json* file which is used to populate the search bar on the CARD website. The underlying script is [updateTextSearch.pl](https://devcard.mcmaster.ca:8888/root/card-website/-/blob/master/_scripts/ontology_search/updateTextSearch.pl) and this search cron runs every 5 mins, so changes to ontology names, addition of terms, or changes to synonyms or CARD Short Names will work in the search bar within 5 minutes.

@@ -2,8 +2,6 @@
 
 The Broad Street Model Module records the type of protein or nucleotide model used to detect an AMR gene and stores all related sequence and mutation reference information. Full descriptions of each model type can be found under the [Model Ontology](/ontologies/model_ontology.md) documentation. Each AMR detection model must be attached to an ARO ontology term; unattached (orphaned) models are not allowed.
 
-[[_TOC_]]
-
 ## Interbase Co-Ordinates
 
 *Sections of text below are copied from http://gmod.org/wiki/Introduction_to_Chado#Interbase_Coordinates*

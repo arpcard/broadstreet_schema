@@ -6,8 +6,6 @@ A variety of metadata are associated with ontology terms in CARD, via the *cvter
 
 The [External Reference Module](dbxref_module.md) has a good explanation of how [Orthogonality](/ontologies/orthogonality.md) can be supported in Broad Street, e.g. placement of a Gene Ontology term/accession within the Antibiotic Resistance Ontology.
 
-[[_TOC_]]
-
 ## *cv* table
 
 The cv table defines each ontology used by Broad Street, whether developed internally or imported from the [OBO Foundry](https://obofoundry.org).

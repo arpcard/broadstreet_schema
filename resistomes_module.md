@@ -2,8 +2,6 @@
 
 The Resistomes & Variants modules contains computer-generated resistome predictions for important pathogens, including sequence variants beyond those reported in the scientific literature, as well as prevalence statistics for AMR genes among pathogens, genomes, and plasmids. Antimicrobial resistance (AMR) molecular resistome, variant, and prevalence data are generated using the Resistance Gene Identifier ([RGI](https://github.com/arpcard/rgi)), a tool for putative AMR gene detection from submitted sequence data using the AMR detection models available in CARD. The contents of the Resistomes & Variants Module tables are calculated outside of CARD (see the [Resistomes software repository](https://devcard.mcmaster.ca:8888/balcock/resistomes)) and uploaded to Broad Street *en masse* for CARD releases. Full details about these data can also be found on the [CARD website](https://card.mcmaster.ca/resistomes).
 
-[[_TOC_]]
-
 ## *prevalence* table
 
 A table containing all individual RGI predictions (excluding "Loose") for genomes, plasmids, genomic islands, or whole-genome shotgun assemblies from NCBI or private data sets. 

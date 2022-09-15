@@ -2,8 +2,6 @@
 
 Broad Street's Publication Module was adapted from [Chado](http://gmod.org/wiki/Introduction_to_Chado) for storing all publication data, currently overwhelmingly based on PubMed identifiers (PMID). Publications in CARD are associated with ontology terms (*cvterm_pub* table in the [Controlled Vocabulary Module](/database_modules/controlled_vocabulary_module)) and model parameters (*model_parameters_pub* table in the [Model Module](/database_modules/model_module.md)). Publications are entered by curators using the web interface, after which CARD acquires all the data needed for the Publication Module via the NCBI API. In addition, as some publications are initially in press (i.e. epub ahead of print), the contents of the Publication Module are updated monthly as part of Broad Street [Automated Tasks](automated_tasks.md).
 
-[[_TOC_]]
-
 ## Curating non-PMID publications
 
 Broad Street, the CARD Website, and CARD Download files can support non-PMID publications by supporting DOIs. Although there is support for this on the curator interface, only the DOI is imported into Broad Street, leaving some fields empty for manual curation, see below. In these cases, the *dbxref_id* uses DOI (*db_id*=73) with the accession being the DOI text (e.g. *10.1039/C2MD20038D*), see https://devcard.mcmaster.ca:8888/root/card-website/-/issues/240. See [facT](https://dune.mcmaster.ca/ontology/37712) in CARD for a DOI-based publication.
