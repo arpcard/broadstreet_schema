@@ -22,8 +22,8 @@ The cv table defines each ontology used by Broad Street, whether developed inter
 |-------|-------------|
 | 23 | [NCBI Taxonomy Ontology](/ontologies/ncbi_taxonomy_ontology.md) |
 | 24 | [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md) |
-| 25 | [Relationship Ontology](ontologies/relationship_ontology.md) |
-| 26 | [Model Ontology](model_ontology.md) |
+| 25 | [Relationship Ontology](/ontologies/relationship_ontology.md) |
+| 26 | [Model Ontology](/ontologies/model_ontology.md) |
 
 ## *cvterm* table
 
@@ -88,7 +88,7 @@ For example:
 
 ## *cvtermpath* table (a [materialization](https://en.wikipedia.org/wiki/Materialized_view))
 
-Key to many algorithmic calculations in CARD are the contents of the *cvtermpath* table, which is used to store calculated closure for ontologies, i.e. length (d) of all paths between two terms within an ontology. While the other tables in the Controlled Vocabulary Module are curated, the contents of *cvtermpath* must be calculated after any change to the contents of the *cvterm_relationship* table. We are not using the scripts provided by GMOD as we found errors with the output, we were not interested in all the output, and they were generally very slow. We developed our own script to fill the *cvtermpath* table from the contents of the *cvterm_relationship* table, see [Automated Tasks](automated_tasks.md). This software calculates direct (d=1) and [transitive](https://en.wikipedia.org/wiki/Transitive_closure) (d>1) but not [reflexive](https://en.wikipedia.org/wiki/Reflexive_closure) (d=0) closure for ontologies but stores only positive transitive closure values in the cvtermpath table (to reduce size). CARD thus only uses positive values when calculating the *cvtermpath* table. The software calculates transitive closure values regardless of relationship type between ontology terms (is_a, part_of, regulated_by, etc.), i.e. closure is not deductive. However, we have added the custom field *cvtermpath.exclusive_type_id*. If the entry in *cvtermpath* involves only one *type_id* throughout the entire path in question, the value of that *type_id* will be placed in *cvtermpath.exclusive_type_id*. Otherwise, it will be NULL. This is useful for looking for paths within branches of the ARO as within-branch paths are almost exclusively is_a.
+Key to many algorithmic calculations in CARD are the contents of the *cvtermpath* table, which is used to store calculated closure for ontologies, i.e. length (d) of all paths between two terms within an ontology. While the other tables in the Controlled Vocabulary Module are curated, the contents of *cvtermpath* must be calculated after any change to the contents of the *cvterm_relationship* table. We are not using the scripts provided by GMOD. We developed our own script to fill the *cvtermpath* table from the contents of the *cvterm_relationship* table, see [Automated Tasks](automated_tasks.md). This software calculates direct (d=1) and [transitive](https://en.wikipedia.org/wiki/Transitive_closure) (d>1) but not [reflexive](https://en.wikipedia.org/wiki/Reflexive_closure) (d=0) closure for ontologies but stores only positive transitive closure values in the cvtermpath table (to reduce size). CARD thus only uses positive values when calculating the *cvtermpath* table. The software calculates transitive closure values regardless of relationship type between ontology terms (is_a, part_of, regulated_by, etc.), i.e. closure is not deductive. However, we have added the custom field *cvtermpath.exclusive_type_id*. If the entry in *cvtermpath* involves only one *type_id* throughout the entire path in question, the value of that *type_id* will be placed in *cvtermpath.exclusive_type_id*. Otherwise, it will be NULL. This is useful for looking for paths within branches of the ARO as within-branch paths are almost exclusively is_a.
 
 | Field | Description |
 |-------|-------------|

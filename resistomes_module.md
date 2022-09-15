@@ -34,8 +34,6 @@ A table containing all individual RGI predictions (excluding "Loose") for genome
 | ncbi_contig | NCBI whole-genome assembly contigs |
 | ncbi_gi | IslandViewer genomic islands found in NCBI |
 | ncbi_plasmid | NCBI complete plasmid sequences |
-| orf_spades | [Wright Clinical Collection](https://devcard.mcmaster.ca:8888/amcarthur/mcarthurlab#genomic-data-sets) (private) |
-| barnards | BARNARDS data set (private) |
 
 ## *prevalence_sequence* table
 
@@ -73,8 +71,6 @@ A table containing all prevalence statistics for individual CARD detection model
 | ncbi_chromosome | prevalence in NCBI complete genome sequences |
 | created_at | timestamp for materialization |
 | criteria | prevalence is from Perfect only (perfect) or Perfect & Strict hits combined (perfect_strict) |
-| orf_spades | prevalence in [Wright Clinical Collection](https://devcard.mcmaster.ca:8888/amcarthur/mcarthurlab#genomic-data-sets) (private) |
-| barnards | prevalence in BARNARDS data set (private) |
 | ncbi_gi | prevalence in IslandViewer genomic islands found in NCBI |
 
 ## *prevalence_categories_stats* table (a [materialization](https://en.wikipedia.org/wiki/Materialized_view))
