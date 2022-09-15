@@ -8,7 +8,7 @@ In the [Controlled Vocabulary Module](controlled_vocabulary_module.md), the *cvt
 
 ![DBXREF](/img/cv_db.jpg)
 
-Also in the *cvterm* table, the term for the OXA-371 gene is *cvterm.cv_id* 24. In the table *cv*, this *cv_id* is the Antibiotic Resistance Ontology, *cv.name* ARO. Why do we record this redundant information indicating that OXA-371 is in the ARO via *cv_id* when the accession is already ARO:3001557? See [Orthogonality](/ontologies/orthogonality.md).
+Also in the *cvterm* table, the term for the OXA-371 gene is *cvterm.cv_id* 24. In the table *cv*, this *cv_id* is the Antibiotic Resistance Ontology, *cv.name* ARO. Why do we record this redundant information indicating that OXA-371 is in the ARO via *cv_id* when the accession is already ARO:3001557?.
 
 ## *db* table
 

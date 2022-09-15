@@ -1,10 +1,10 @@
 # Controlled Vocabulary Module
 
-Ontologies provide the organizing principle for data in CARD and allow the power of [Extensional Mereology](https://en.wikipedia.org/wiki/Mereology) in searching of data. CARD's Controlled Vocabulary Module in an extension of the [Chado CV Module](http://gmod.org/wiki/Chado_CV_Module). Note that when curating CARD, "ontology module", "cvterm module", and "controlled vocabulary module" are all synonymous terms. This page describes the Broad Street version of the Chado ontology SQL schema, not the ontologies themselves. To review CARD's ontologies, see [Ontologies](/ontologies/).
+Ontologies provide the organizing principle for data in CARD and allow the power of [Extensional Mereology](https://en.wikipedia.org/wiki/Mereology) in searching of data. CARD's Controlled Vocabulary Module in an extension of the [Chado CV Module](http://gmod.org/wiki/Chado_CV_Module). Note that when curating CARD, "ontology module", "cvterm module", and "controlled vocabulary module" are all synonymous terms. This page describes the Broad Street version of the Chado ontology SQL schema, not the ontologies themselves.
 
 A variety of metadata are associated with ontology terms in CARD, via the *cvtermprop*, *cvtermsynonym*, and *cvterm_dbxref* tables. To support association of publications with ontology terms, we added the custom *cvterm_pub* table and similarly we added the *cvterm_models* table to link ontology terms to the [Model Module](model_module.md).
 
-The [External Reference Module](dbxref_module.md) has a good explanation of how [Orthogonality](/ontologies/orthogonality.md) can be supported in Broad Street, e.g. placement of a Gene Ontology term/accession within the Antibiotic Resistance Ontology.
+The [External Reference Module](dbxref_module.md) has a good explanation of how Orthogonality can be supported in Broad Street, e.g. placement of a Gene Ontology term/accession within the Antibiotic Resistance Ontology.
 
 ## *cv* table
 
@@ -20,10 +20,10 @@ The cv table defines each ontology used by Broad Street, whether developed inter
 
 | cv_id | database |
 |-------|-------------|
-| 23 | [NCBI Taxonomy Ontology](/ontologies/ncbi_taxonomy_ontology.md) |
-| 24 | [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md) |
-| 25 | [Relationship Ontology](/ontologies/relationship_ontology.md) |
-| 26 | [Model Ontology](/ontologies/model_ontology.md) |
+| 23 | NCBI Taxonomy Ontology |
+| 24 | Antibiotic Resistance Ontology |
+| 25 | Relationship Ontology |
+| 26 | Model Ontology |
 
 ## *cvterm* table
 
@@ -40,7 +40,7 @@ The *cvterm* table defines each ontology term, e.g. [beta-lactamase](https://car
 | is_relationshiptype | for term type, 0 = descriptive term, 1 = relationship term |
 | name_tsvector | legacy search index (depreciated) |
 | definition_tsvector | legacy search index (depreciated) |
-| cvterm_class | [Classification Tag](/ontologies/classification_tags.md) (if applicable) |
+| cvterm_class | Classification Tag (if applicable) |
 
 ## *cvtermsynonym* table
 
@@ -51,20 +51,20 @@ The *cvtermsynonym* table records synonyms for the *cvterm.name* values as often
 | cvtermsynonym_id | unique identifier for each synonym |
 | cvterm_id | the ontology term being connected to the synonym |
 | synonym |  text of the synonym |
-| type_id | type of synonym as defined by *cvterm_id* in the [Synonym Ontology](/ontologies/synonym_ontology.md) |
+| type_id | type of synonym as defined by *cvterm_id* in the Synonym Ontology |
 | synonym_tsvector | legacy search index (depreciated) |
 
 Note, we currently use *cvterm_id*=35 (exact) as *type_id* in Broad Street, but do not make type visible on the website.
 
 ## *cvtermprop* table
 
-The *cvtermprop* table records properties for an ontology term, a very Chado-like approach for storing features associated with a term as opposed to external references (publications, structures, models). We use *cvtermprop* to store curator Notes (*cvterm_id*=35430 in the [Publication Ontology](ontologies/pub_ontology.md)) and [CARD Short Names](/ontologies/card_short_names.md) (*cvterm_id*=45489 in the [Antibiotic Resistance Ontology](ontologies/antibiotic_resistance_ontology.md)).
+The *cvtermprop* table records properties for an ontology term, a very Chado-like approach for storing features associated with a term as opposed to external references (publications, structures, models). We use *cvtermprop* to store curator Notes (*cvterm_id*=35430 in the Publication Ontology) and CARD Short Names (*cvterm_id*=45489 in the Antibiotic Resistance Ontology).
 
 | Field | Description |
 |-------|-------------|
 | cvtermprop_id | unique identifier for each property |
 | cvterm_id | the ontology term being connected to the property |
-| type_id | the type of property, i.e. Note from the [Publication Ontology](ontologies/pub_ontology.md) or CARD Short Name from the [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md) |
+| type_id | the type of property, i.e. Note from the Publication Ontology or CARD Short Name from the Antibiotic Resistance Ontology |
 | value | value of the property, e.g. the text of the curator Note |
 | rank | rank of the property, for sorting or order of presentation (not used) |
 
@@ -75,7 +75,7 @@ The cvterm_relationship table defines the relationships between ontology terms, 
 | Field | Description |
 |-------|-------------|
 | cvterm_relationship_id | unique identifier for each relationship |
-| type_id | type of relationship defined by a *cvterm_id* from the [Relationship Ontology](ontologies/relationship_ontology.md) |
+| type_id | type of relationship defined by a *cvterm_id* from the Relationship Ontology |
 | subject_id | child node *cvterm_id* |
 | object_id | parent node *cvterm_id* |
 

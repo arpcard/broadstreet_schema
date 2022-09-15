@@ -1,6 +1,6 @@
 # Model Module
 
-The Broad Street Model Module records the type of protein or nucleotide model used to detect an AMR gene and stores all related sequence and mutation reference information. Full descriptions of each model type can be found under the [Model Ontology](/ontologies/model_ontology.md) documentation. Each AMR detection model must be attached to an ARO ontology term; unattached (orphaned) models are not allowed.
+The Broad Street Model Module records the type of protein or nucleotide model used to detect an AMR gene and stores all related sequence and mutation reference information. Full descriptions of each model type can be found under the Model Ontology documentation. Each AMR detection model must be attached to an ARO ontology term; unattached (orphaned) models are not allowed.
 
 ## Interbase Co-Ordinates
 
@@ -16,7 +16,7 @@ In the Model Module, fmin and fmax are interbase coordinates, whereas GenBank us
 
 ## *models* table
 
-The *models* table defines each model and its model type, as described by the [Model Ontology](/ontologies/model_ontology.md). 
+The *models* table defines each model and its model type, as described by the Model Ontology. 
 
 | Field | Description |
 |-------|-------------|
@@ -27,11 +27,9 @@ The *models* table defines each model and its model type, as described by the [M
 | private | indicates if the model is private (1) or not (0); private models are not visible on the CARD website |
 | resistance_type | 0 = undefined, 1 = intrinsic (i.e., chromosomally-encoded), 2 = acquired (e.g., plasmid-bourne) |
 
-Note: The [devCARD Tools Interface](https://dune.mcmaster.ca/tools/generatejson) has an option to include private models in a generated RGI-compatible JSON file.
-
 ## *model_parameters* table
 
-Each model is associated with bioinformatics parameters for use by the Resistance Gene Identifier or other software, as described by the [Model Ontology](/ontologies/model_ontology.md). For example, most models (including [protein homolog](https://card.mcmaster.ca/ontology/40292) and [protein variant]((https://card.mcmaster.ca/ontology/40293)) models) have a BLASTP-determined cutoff E-value; protein variant models additionally have mutation (SNP, indel, etc.) parameters. Any given model may have multiple parameters associated with it if required.
+Each model is associated with bioinformatics parameters for use by the Resistance Gene Identifier or other software, as described by the Model Ontology. For example, most models (including [protein homolog](https://card.mcmaster.ca/ontology/40292) and [protein variant]((https://card.mcmaster.ca/ontology/40293)) models) have a BLASTP-determined cutoff E-value; protein variant models additionally have mutation (SNP, indel, etc.) parameters. Any given model may have multiple parameters associated with it if required.
 
 | Field | Description |
 |-------|-------------|
@@ -62,7 +60,7 @@ Most, but not all, models are based on reference sequences acquired from NCBI. T
 | model_id | associated model identifier found in the *models* table |
 | dna_sequence | reference DNA sequence |
 | protein_sequence | reference protein sequence (if applicable) |
-| source_species | taxonomic source of the reference sequence(s) as defined by the [NCBI Taxonomy Ontology](/ontologies/ncbi_taxonomy_ontology.md) |
+| source_species | taxonomic source of the reference sequence(s) as defined by the NCBI Taxonomy Ontology |
 | fmin | start position of reference sequence in original NCBI entry |
 | fmax | end position of reference sequence in original NCBI entry |
 | dna_dbxref_id | connection to the [External Reference Module](dbxref_module.md) for the NCBI accession of the original nucleotide NCBI entry, including version |

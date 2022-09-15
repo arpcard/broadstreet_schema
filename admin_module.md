@@ -4,7 +4,7 @@ The following tables are used to support the Broad Street database.
 
 ## *users* table
 
-This table stores all users or curators. There are two types of users: Curators (*type* = 1) can login and edit ontologies, while Regular (*type* = 0) users can login and use analysis tools without inputing captcha forms. When creating a new user the default is *type* = 0. New users can register at https://dune.mcmaster.ca/auth/register, but *type* can only be changed at the SQL-level by a CARD administrator.
+This table stores all users or curators. There are two types of users: Curators (*type* = 1) can login and edit ontologies, while Regular (*type* = 0) users can login and use analysis tools without inputing captcha forms. When creating a new user the default is *type* = 0, but *type* can only be changed at the SQL-level by a CARD administrator.
 
 | Field | Description |
 |-------|-------------|
@@ -30,7 +30,7 @@ A table for tracking password resets by users.
 
 ## *activity_log* table
 
-A table logging all curator transactions at http://dune.mcmaster.ca.
+A table logging all curator transactions.
 
 | Field | Description |
 |-------|-------------|

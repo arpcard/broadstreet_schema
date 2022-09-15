@@ -4,7 +4,7 @@ Broad Street's Publication Module was adapted from [Chado](http://gmod.org/wiki/
 
 ## Curating non-PMID publications
 
-Broad Street, the CARD Website, and CARD Download files can support non-PMID publications by supporting DOIs. Although there is support for this on the curator interface, only the DOI is imported into Broad Street, leaving some fields empty for manual curation, see below. In these cases, the *dbxref_id* uses DOI (*db_id*=73) with the accession being the DOI text (e.g. *10.1039/C2MD20038D*), see https://devcard.mcmaster.ca:8888/root/card-website/-/issues/240. See [facT](https://card.mcmaster.ca/ontology/37712) in CARD for a DOI-based publication.
+Broad Street, the CARD Website, and CARD Download files can support non-PMID publications by supporting DOIs. Although there is support for this on the curator interface, only the DOI is imported into Broad Street, leaving some fields empty for manual curation, see below. In these cases, the *dbxref_id* uses DOI (*db_id*=73) with the accession being the DOI text (e.g. *10.1039/C2MD20038D*). See [facT](https://card.mcmaster.ca/ontology/37712) in CARD for a DOI-based publication.
 
 ## *pub* table
 
@@ -22,7 +22,7 @@ The *pub* table records information on each publication.
 | pages | publication pages |
 | miniref | short reference, see below |
 | uniquename | full reference, see below |
-| type_id | the type of publication, defined in the [Publication Ontology](/ontologies/pub_ontology.md), but currently all publications are assigned cvterm_id 35432 (*paper*) |
+| type_id | the type of publication, defined in the Publication Ontology, but currently all publications are assigned cvterm_id 35432 (*paper*) |
 | is_obsolete | flag for publication status, 0 = in use, 1 = obsolete (not used) |
 | publisher | publisher information (not used) |
 | pubplace | publisher location (not used) |

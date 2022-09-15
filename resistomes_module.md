@@ -1,6 +1,6 @@
 # Resistomes & Variants Module
 
-The Resistomes & Variants modules contains computer-generated resistome predictions for important pathogens, including sequence variants beyond those reported in the scientific literature, as well as prevalence statistics for AMR genes among pathogens, genomes, and plasmids. Antimicrobial resistance (AMR) molecular resistome, variant, and prevalence data are generated using the Resistance Gene Identifier ([RGI](https://github.com/arpcard/rgi)), a tool for putative AMR gene detection from submitted sequence data using the AMR detection models available in CARD. The contents of the Resistomes & Variants Module tables are calculated outside of CARD (see the [Resistomes software repository](https://devcard.mcmaster.ca:8888/balcock/resistomes)) and uploaded to Broad Street *en masse* for CARD releases. Full details about these data can also be found on the [CARD website](https://card.mcmaster.ca/resistomes).
+The Resistomes & Variants modules contains computer-generated resistome predictions for important pathogens, including sequence variants beyond those reported in the scientific literature, as well as prevalence statistics for AMR genes among pathogens, genomes, and plasmids. Antimicrobial resistance (AMR) molecular resistome, variant, and prevalence data are generated using the Resistance Gene Identifier ([RGI](https://github.com/arpcard/rgi)), a tool for putative AMR gene detection from submitted sequence data using the AMR detection models available in CARD. The contents of the Resistomes & Variants Module tables are calculated outside of CARD and uploaded to Broad Street *en masse* for CARD releases. Full details about these data can also be found on the [CARD website](https://card.mcmaster.ca/resistomes).
 
 ## *prevalence* table
 
@@ -75,17 +75,17 @@ A table containing all prevalence statistics for individual CARD detection model
 
 ## *prevalence_categories_stats* table (a [materialization](https://en.wikipedia.org/wiki/Materialized_view))
 
-A table containing all prevalence statistics for individual CARD [Classification Tags](/ontologies/classification_tags.md), i.e. drug classes, resistance mechanisms, AMR gene families, etc.
+A table containing all prevalence statistics for individual CARD Classification Tags, i.e. drug classes, resistance mechanisms, AMR gene families, etc.
 
 | Field | Description |
 |-------|-------------|
 | prevalence_categories_stats_id | unique identifier for each statistic |
 | source_species | the taxonomic source of the annotated sequence from the [NCBI Taxonomy Ontology](ncbi_taxonomy_ontology.md) |
-| category_id | ontology term *cvterm_id* from the [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md), e.g. *cvterm_id*=35935 for aminoglycoside antibiotic |
+| category_id | ontology term *cvterm_id* from the Antibiotic Resistance Ontology, e.g. *cvterm_id*=35935 for aminoglycoside antibiotic |
 | criteria | prevalence is from Perfect only (perfect) or Perfect & Strict hits combined (perfect_strict) |
 | value | prevalence value |
 | created_at | timestamp for materialization |
-| cvterm_class | [Classification Tag](/ontologies/classification_tags.md), e.g. Drug Class |
+| cvterm_class | Classification Tag, e.g. Drug Class |
 
 ## *prevalence_denominator* table (a [materialization](https://en.wikipedia.org/wiki/Materialized_view))
 
@@ -101,13 +101,13 @@ A table containing all sample sizes for each *data_type*.
 
 ## *prevalence_cvterm* joins table (a [materialization](https://en.wikipedia.org/wiki/Materialized_view))
 
-The *prevalence_cvterm* table connects the individual RGI predictions in the *prevalence* table with [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md) categories used in table *prevalence_categories_stats*.
+The *prevalence_cvterm* table connects the individual RGI predictions in the *prevalence* table with Antibiotic Resistance Ontology categories used in table *prevalence_categories_stats*.
 
 | Field | Description |
 |-------|-------------|
 | prevalence_cvterm_id | unique identifier for each prevalence cvterm_id join |
 | prevalence_id | associated prevalence identifier found in the prevalence table |
-| cvterm_id | category term *cvterm_id* from the [Antibiotic Resistance Ontology](/ontologies/antibiotic_resistance_ontology.md), e.g. *cvterm_id*=35935 for aminoglycoside antibiotic |
+| cvterm_id | category term *cvterm_id* from the Antibiotic Resistance Ontology, e.g. *cvterm_id*=35935 for aminoglycoside antibiotic |
 | created_at | timestamp for materialization |
 
 ## *prevalence_accession_crossref* table
