@@ -10,7 +10,7 @@ A table containing all individual RGI predictions (excluding "Loose") for genome
 |-------|-------------|
 | prevalence_id | unique identifier for each RGI prediction |
 | model_id | CARD detection model from the [Model Module](model_module.md), eg. model_id=783 for the *NDM-1* gene |
-| source_species | the taxonomic source of the annotated sequence from the [NCBI Taxonomy Ontology](ncbi_taxonomy_ontology.md) |
+| source_species | the taxonomic source of the annotated sequence from the NCBI Taxonomy Ontology |
 | dna_accession | the annotated sequence accession, e.g. NZ_CP084031.1 |
 | fmin | the start nucleotide position of the RGI prediction in the annotated sequence in [Interbase Co-Ordinates](model_module.md#interbase-co-ordinates) |
 | fmax | the stop nucleotide position of the RGI prediction in the annotated sequence in [Interbase Co-Ordinates](model_module.md#interbase-co-ordinates) |
@@ -65,7 +65,7 @@ A table containing all prevalence statistics for individual CARD detection model
 |-------|-------------|
 | prevalence_models_stats_id | unique identifier for each statistic |
 | model_id | CARD detection model from the [Model Module](model_module.md) |
-| source_species | the taxonomic source of the annotated sequence from the [NCBI Taxonomy Ontology](ncbi_taxonomy_ontology.md) |
+| source_species | the taxonomic source of the annotated sequence from the NCBI Taxonomy Ontology |
 | ncbi_plasmid | prevalence in NCBI complete plasmid sequences |
 | ncbi_contig | prevalence in NCBI whole-genome assembly contigs |
 | ncbi_chromosome | prevalence in NCBI complete genome sequences |
@@ -80,7 +80,7 @@ A table containing all prevalence statistics for individual CARD Classification 
 | Field | Description |
 |-------|-------------|
 | prevalence_categories_stats_id | unique identifier for each statistic |
-| source_species | the taxonomic source of the annotated sequence from the [NCBI Taxonomy Ontology](ncbi_taxonomy_ontology.md) |
+| source_species | the taxonomic source of the annotated sequence from the NCBI Taxonomy Ontology |
 | category_id | ontology term *cvterm_id* from the Antibiotic Resistance Ontology, e.g. *cvterm_id*=35935 for aminoglycoside antibiotic |
 | criteria | prevalence is from Perfect only (perfect) or Perfect & Strict hits combined (perfect_strict) |
 | value | prevalence value |
@@ -94,7 +94,7 @@ A table containing all sample sizes for each *data_type*.
 | Field | Description |
 |-------|-------------|
 | prevalence_denominator_id | unique identifier for each statistic |
-| source_species | the taxonomic source of the annotated sequence from the [NCBI Taxonomy Ontology](ncbi_taxonomy_ontology.md) |
+| source_species | the taxonomic source of the annotated sequence from the NCBI Taxonomy Ontology |
 | data_type | annotated sequence data type, see above |
 | value | sample size |
 | created_at | timestamp for materialization |
