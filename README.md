@@ -2,7 +2,7 @@
 
 The Broad Street schema is organized into Modules, each consisting of a serious of tables for storing data, and curation relies on entry & manipulation of data in these modules. Curators rarely work at the Broad Street schema level, but software and algorithm developers often need to understand how the data is fundamentally organized. Nonetheless, new curators and developers should familiarize themselves with both the Broad Street Modules and the curation protocols. When curators use the web interface to add data to CARD, they are manipulating the contents of Broad Street.
 
-Please note, this is a port of internal documentation, some links may point to servers behind the McMaster University firewall and thus will not be accessible.
+**Please note, this is a port of internal documentation, some links may point to servers behind the McMaster University firewall and thus will not be accessible.**
 
 ## Modules
 
