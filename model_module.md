@@ -21,7 +21,7 @@ The *models* table defines each model and its model type, as described by the [M
 | Field | Description |
 |-------|-------------|
 | model_id | unique identifier for each model |
-| model_type_id | defines the assigned model type; for example, a protein homolog model is [model_type_id = 40292](https://dune.mcmaster.ca/ontology/40292) |
+| model_type_id | defines the assigned model type; for example, a protein homolog model is [model_type_id = 40292](https://card.mcmaster.ca/ontology/40292) |
 | name | the model name must be identical the assigned ontology term name |
 | description | is a user-defined description; the default description is the ontology term description |
 | private | indicates if the model is private (1) or not (0); private models are not visible on the CARD website |
@@ -31,12 +31,12 @@ Note: The [devCARD Tools Interface](https://dune.mcmaster.ca/tools/generatejson)
 
 ## *model_parameters* table
 
-Each model is associated with bioinformatics parameters for use by the Resistance Gene Identifier or other software, as described by the [Model Ontology](/ontologies/model_ontology.md). For example, most models (including [protein homolog](https://dune.mcmaster.ca/ontology/40292) and [protein variant]((https://dune.mcmaster.ca/ontology/40293)) models) have a BLASTP-determined cutoff E-value; protein variant models additionally have mutation (SNP, indel, etc.) parameters. Any given model may have multiple parameters associated with it if required.
+Each model is associated with bioinformatics parameters for use by the Resistance Gene Identifier or other software, as described by the [Model Ontology](/ontologies/model_ontology.md). For example, most models (including [protein homolog](https://card.mcmaster.ca/ontology/40292) and [protein variant]((https://card.mcmaster.ca/ontology/40293)) models) have a BLASTP-determined cutoff E-value; protein variant models additionally have mutation (SNP, indel, etc.) parameters. Any given model may have multiple parameters associated with it if required.
 
 | Field | Description |
 |-------|-------------|
 | model_parameters_id | unique identifier for each model parameter |
-| type_id | defines the assigned parameter type; for example, a SNP is [model_type_id = 36301](https://dune.mcmaster.ca/ontology/36301) |
+| type_id | defines the assigned parameter type; for example, a SNP is [model_type_id = 36301](https://card.mcmaster.ca/ontology/36301) |
 | model_id | associated model identifier found in the *models* table |
 | value | the value of the parameter, regardless of parameter type |
 | experimental | defines if the parameter is clinically validated (0) or *in vitro* (i.e. correlative) only (1) |

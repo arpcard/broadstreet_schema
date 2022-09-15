@@ -27,7 +27,7 @@ The cv table defines each ontology used by Broad Street, whether developed inter
 
 ## *cvterm* table
 
-The *cvterm* table defines each ontology term, e.g. [beta-lactamase](https://dune.mcmaster.ca/ontology/36010).
+The *cvterm* table defines each ontology term, e.g. [beta-lactamase](https://card.mcmaster.ca/ontology/36010).
 
 | Field | Description |
 |-------|-------------|
@@ -81,8 +81,8 @@ The cvterm_relationship table defines the relationships between ontology terms, 
 
 For example: 
 
-* [TEM-13](https://dune.mcmaster.ca/ontology/37265) (subject_id) [is_a](https://dune.mcmaster.ca/ontology/31) (type_id) [TEM beta-lactamase](https://dune.mcmaster.ca/ontology/36023) (object_id)
-* [TEM beta-lactamase](https://dune.mcmaster.ca/ontology/36023) (subject_id) [confers_resistance_to_drug_class](https://dune.mcmaster.ca/ontology/36382) (type_id) [monobactam](https://dune.mcmaster.ca/ontology/35923) (object_id)
+* [TEM-13](https://card.mcmaster.ca/ontology/37265) (subject_id) [is_a](https://card.mcmaster.ca/ontology/31) (type_id) [TEM beta-lactamase](https://card.mcmaster.ca/ontology/36023) (object_id)
+* [TEM beta-lactamase](https://card.mcmaster.ca/ontology/36023) (subject_id) [confers_resistance_to_drug_class](https://card.mcmaster.ca/ontology/36382) (type_id) [monobactam](https://card.mcmaster.ca/ontology/35923) (object_id)
 
 ![TEM-13](/img/TEM-13.jpg)
 

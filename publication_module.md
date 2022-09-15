@@ -4,7 +4,7 @@ Broad Street's Publication Module was adapted from [Chado](http://gmod.org/wiki/
 
 ## Curating non-PMID publications
 
-Broad Street, the CARD Website, and CARD Download files can support non-PMID publications by supporting DOIs. Although there is support for this on the curator interface, only the DOI is imported into Broad Street, leaving some fields empty for manual curation, see below. In these cases, the *dbxref_id* uses DOI (*db_id*=73) with the accession being the DOI text (e.g. *10.1039/C2MD20038D*), see https://devcard.mcmaster.ca:8888/root/card-website/-/issues/240. See [facT](https://dune.mcmaster.ca/ontology/37712) in CARD for a DOI-based publication.
+Broad Street, the CARD Website, and CARD Download files can support non-PMID publications by supporting DOIs. Although there is support for this on the curator interface, only the DOI is imported into Broad Street, leaving some fields empty for manual curation, see below. In these cases, the *dbxref_id* uses DOI (*db_id*=73) with the accession being the DOI text (e.g. *10.1039/C2MD20038D*), see https://devcard.mcmaster.ca:8888/root/card-website/-/issues/240. See [facT](https://card.mcmaster.ca/ontology/37712) in CARD for a DOI-based publication.
 
 ## *pub* table
 
